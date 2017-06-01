@@ -1,9 +1,28 @@
+<?php
+  session_start();
+  if(!isset($_SESSION['u_id']))
+    header('location:logIn.php');
+  include('function.php');
+
+  $user=getuserdetails($_SESSION['u_id']);
+?>
+<script>
+function display()
+{
+  var user=<?php echo json_encode($user, JSON_PRETTY_PRINT)?>;
+  document.getElementById("user_name").innerHTML=user.u_name;
+  document.getElementById("user_id").innerHTML="<b>USER ID:</b> "+user.u_id;
+  document.getElementById("user_mail").innerHTML="<b>USER MAIL :</b> "+user.u_mail;
+  document.getElementById("user").innerHTML="<b>USER NAME :</b> "+user.u_name;
+
+}
+</script>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Poushali Choudhury|RCC BANK</title>
+  <title id="user_name"></title>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -12,6 +31,10 @@
   <link href="http://fezvrasta.github.io/snackbarjs/dist/snackbar.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+  b
+    {
+      font-size: 15px;
+    }
   #test 
     {
     border-top: 8px solid gold;
@@ -35,7 +58,7 @@
     }
   </style>
 </head>
-<body>
+<body onload="display();">
 
 <fieldset>
 <div class="container" style="width: 700px; height:100px;">
@@ -51,31 +74,33 @@
         <div class="well bs-component">
         <div id="test">
         <ul class="nav nav-pills">
-            <li><a href="details.html">TRANSACTION DETAILS <span class="badge"></span></a></li>
-            <li><a href="product and service.html">SERVICES<span class="badge"></span></a></li>
-            <li><a href="home.html">ABOUT US<span class="badge"></span></a></li>
-            <li><a href="contact.html">CONTACT US<span class="badge"></span></a></li>
-            <li><a href="logIn.html">LOG OUT<span class="badge"></span></a></li>
+            <li><a href="details.php">RIDE DETAILS<span class="badge"></span></a></li>
+            <li><a href="ride.php">RIDE<span class="badge"></span></a></li>
+            <li><a href="contact.php">CONTACT US<span class="badge"></span></a></li>
+            <li><a href="logIn.php">LOG OUT<span class="badge"></span></a></li>
           </ul>
           </div>
           <br>
           <form class="form-horizontal">
             <fieldset>
-            <legend><h1><center>Accounts Details</center></h1></legend>
+            <legend><h1><center>RIDE DETAILS</center></h1></legend>
             <div id="test_2">
             <b>PERSONAL DETAILS</b>
             </div>
             <div id="info_block">
-            <p><b>NAME  </b> Poushali Choudhury</p>
-            <p><b>ACCOUNT  </b> 98394994839348</p>
+            <div id="user"></div>
+            <div id="user_id"></div>
+            <div id="user_mail"></div>
             </div>
     <table class="table table-striped table-hover ">
   <thead>
   <tr>
-    <th>Sl No</th>
-    <th>Value Date</th>
-    <th>Transaction Date</th>
-    <th>Transaction Amount</th>
+    <th>Ride No</th>
+    <th>Car ID</th>
+    <th>Driver ID</th>
+    <th>BOOKING DATE</th>
+    <th>DEPURTURE DATE</th>
+    <th></th>
   </tr>
   </thead>
   <tbody>
@@ -84,41 +109,7 @@
     <td>09/01/2017</td>
     <td>10/01/2017</td>
     <td>1000</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>09/01/2017</td>
-    <td>10/01/2017</td>
-    <td>1000</td>
-  <tr class="info">
-    <td>3</td>
-    <td>09/01/2017</td>
-    <td>10/01/2017</td>
-    <td>1000</td>
-  </tr>
-  <tr class="success">
-    <td>4</td>
-    <td>09/01/2017</td>
-    <td>10/01/2017</td>
-    <td>1000</td>
-  </tr>
-  <tr class="danger">
-    <td>5</td>
-    <td>09/01/2017</td>
-    <td>10/01/2017</td>
-    <td>1000</td>
-  </tr>
-  <tr class="warning">
-    <td>5</td>
-    <td>09/01/2017</td>
-    <td>10/01/2017</td>
-    <td>1000</td>
-  </tr>
-  <tr class="active">
-    <td>6</td>
-    <td>09/01/2017</td>
-    <td>10/01/2017</td>
-    <td>1000</td>
+    <td></td>
   </tr>
   </tbody>
 </table>     
