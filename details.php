@@ -18,18 +18,37 @@ function display()
 }
 </script>
 <!DOCTYPE html>
+
 <html>
+<!-- MEMO: update me with `git checkout gh-pages && git merge master && git push origin gh-pages` -->
 <head>
+<<<<<<< HEAD:details.php
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title id="user_name"></title>
+=======
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+  <title>RCC Bank</title>
+
+  <!-- Material Design fonts -->
+>>>>>>> 7a651f0b59858e7bf76cd9bfeb4018c2dbbcaf5c:details.html
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Bootstrap -->
   <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Material Design -->
   <link href="dist/css/bootstrap-material-design.css" rel="stylesheet">
   <link href="dist/css/ripples.min.css" rel="stylesheet">
+
+
   <link href="http://fezvrasta.github.io/snackbarjs/dist/snackbar.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD:details.php
   <style>
   b
     {
@@ -59,19 +78,54 @@ function display()
   </style>
 </head>
 <body onload="display();">
+=======
+  </head>
+<body>
+<div class="container">
 
-<fieldset>
-<div class="container" style="width: 700px; height:100px;">
-<div class="bs-docs-section">
+  <!-- Navbar
+================================================== -->
+
+          <div class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+              <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                  <li><a href="javascript:void(0)">Home</a></li>
+                  <li><a href="product and service.html">Product and Services</a></li>
+                  <li class="active"><a href="javascript:void(0)">Transaction Details</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">                 
+                  <li class="dropdown">
+                    <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown"><i class="material-icons">account_circle</i>
+                      <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      
+                      <a href="logIn.html" target="_top">Log In</a> 
+                      <br>
+                      <a href="registration.html" target="_top">Create an account</a>
+                   </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          
+
+  <!-- Forms
+================================================== -->
+>>>>>>> 7a651f0b59858e7bf76cd9bfeb4018c2dbbcaf5c:details.html
+
     <div class="row">
-      <div class="col-md-12">
-        <div class="page-header">
-      </div>
-    </div>
-</div>
-    <div class="row">
-      <div>
+      <div >
         <div class="well bs-component">
+<<<<<<< HEAD:details.php
         <div id="test">
         <ul class="nav nav-pills">
             <li><a href="details.php">RIDE DETAILS<span class="badge"></span></a></li>
@@ -93,6 +147,15 @@ function display()
             <div id="user_mail"></div>
             </div>
     <table class="table table-striped table-hover ">
+=======
+          <form class="form-horizontal">
+            <fieldset>
+            <legend><h1><center>Accounts Details</center></h1></legend>
+            <legend>Name: Poushali Choudhury</legend>
+            <legend>Account Number: 83450345904590</legend>
+            <legend>
+            <table class="table table-striped table-hover ">
+>>>>>>> 7a651f0b59858e7bf76cd9bfeb4018c2dbbcaf5c:details.html
   <thead>
   <tr>
     <th>Ride No</th>
@@ -112,19 +175,26 @@ function display()
     <td></td>
   </tr>
   </tbody>
-</table>     
-       	</div>
+</table>
+            </legend>
+            </fieldset>
+          </form>
+        </div>
       </div>
       
     </div>
   </div>    
 </div>
+</div>
     
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 <script src="dist/js/ripples.min.js"></script>
 <script src="dist/js/material.min.js"></script>
 <script src="http://fezvrasta.github.io/snackbarjs/dist/snackbar.min.js"></script>
+
+
 <script src="http://cdnjs.cloudflare.com/ajax/libs/noUiSlider/6.2.0/jquery.nouislider.min.js"></script>
 <script>
   $(function () {
